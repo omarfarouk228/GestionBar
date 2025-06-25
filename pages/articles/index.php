@@ -35,6 +35,7 @@ $articles = $stmt->fetchAll();
                 <a class="btn btn-info float-end" href="create.php">Ajouter un article</a>
                 <table class="table table-striped mt-5">
                     <tr>
+                        <th></th>
                         <th>Titre</th>
                         <th>Prix</th>
                         <th>Description</th>
@@ -44,6 +45,9 @@ $articles = $stmt->fetchAll();
                     foreach ($articles as $article) {
                     ?>
                         <tr>
+                            <td>
+                                <img src="../<?= $article['image_path'] ?>" class="rounded-circle" width="50px" alt="<?= $article['image_path'] ?>">
+                            </td>
                             <td><?= $article['title'] ?></td>
                             <td><?= $article['price'] ?> €</td>
                             <td><?= $article['description'] ?></td>

@@ -35,7 +35,7 @@ if (!isset($_SESSION['user_id'])) {
                 <?php
                 }
                 ?>
-                <form action="../../controllers/post_create_article.php" method="POST" class="text-center">
+                <form action="../../controllers/post_create_article.php" method="POST" class="text-center" enctype="multipart/form-data">
                     <div class="form-group text-start">
                         <label for="title">Titre</label>
                         <input type="text" class="form-control mt-2" placeholder="Ex: Fanta Orange" name="title" id="title" required>
@@ -47,6 +47,10 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="form-group text-start mt-3">
                         <label for="description">Description</label>
                         <textarea class="form-control mt-2" placeholder="Ex: Decrivez votre article" name="description" id="description" required></textarea>
+                    </div>
+                    <div class="form-group text-start mt-3">
+                        <label for="image">Image</label>
+                        <input type="file" accept="image/*" class="form-control mt-2" name="image" id="image">
                     </div>
                     <button type="submit" class="btn btn-success mt-4 px-5 py-2 fw-bold">Ajouter</button>
                 </form>
