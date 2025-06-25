@@ -1,0 +1,9 @@
+.auth{
+    background-image: url('images/background.jpg');
+    background-size: cover;
+}
+
+.dashboard{
+    min-height:100vh;
+    height:500px;
+}
