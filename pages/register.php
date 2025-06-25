@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GestionBar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="../public/style.css">
 </head>
 
 <body class="auth">
@@ -27,9 +27,8 @@
                     <div class="alert alert-danger text-start"><?= $message ?></div>
                 <?php
                 }
-
                 ?>
-                <form action="controllers/post_register.php" method="POST">
+                <form action="../controllers/post_register.php" method="POST">
                     <div class="form-group text-start">
                         <label for="fullname">Nom complet</label>
                         <input type="text" class="form-control mt-2" placeholder="DUPOND Mark" name="fullname" id="fullname" required>
@@ -45,7 +44,7 @@
                     <button type="submit" class="btn btn-success mt-4 px-5 py-2 fw-bold">S'inscrire</button>
                 </form>
 
-                <a href="index.php" class="mt-3 d-block text-dark">Avez-vous déjà un compte? Veuillez-vous connecter.</a>
+                <a href="../index.php" class="mt-3 d-block text-dark">Avez-vous déjà un compte? Veuillez-vous connecter.</a>
             </div>
         </div>
 

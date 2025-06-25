@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['user_id'])) {
-    header('Location: dashboard.php');
+    header('Location: pages/dashboard.php');
 }
 
 ?>
@@ -49,7 +49,7 @@ if (isset($_SESSION['user_id'])) {
                     <button type="submit" class="btn btn-success mt-4 px-5 py-2 fw-bold">Se connecter</button>
                 </form>
 
-                <a href="register.php" class="mt-3 d-block text-dark">Vous n'avez pas de compte? Inscrivez-vous</a>
+                <a href="pages/register.php" class="mt-3 d-block text-dark">Vous n'avez pas de compte? Inscrivez-vous</a>
             </div>
         </div>
 

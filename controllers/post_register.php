@@ -12,7 +12,7 @@ $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 if (checkEmailInDatabase($pdo, $email)) {
     // L'adresse mail existe déjà
-    header('Location: ../register.php?error=1');
+    header('Location: ../pages/register.php?error=1');
 } else {
     // Insertion de l'utilisateur dans la base
     $sqlInsertUser = "INSERT INTO users(fullname, email, password) VALUES(?, ?, ?)";
@@ -27,9 +27,9 @@ if (checkEmailInDatabase($pdo, $email)) {
         $_SESSION['fullname'] = $fullname;
         $_SESSION['email'] = $email;
 
-        header('Location: ../dashboard.php');
+        header('Location: ../pages/dashboard.php');
     } else {
         // Enregistrement échoué
-        header('Location: ../register.php?error=2');
+        header('Location: ../pages/register.php?error=2');
     }
 }

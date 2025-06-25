@@ -17,7 +17,7 @@ if ($user) {
         $_SESSION['user_id'] = $user["id"];
         $_SESSION['fullname'] =  $user["fullname"];
         $_SESSION['email'] =  $user["email"];
-        header('Location: ../dashboard.php');
+        header('Location: ../pages/dashboard.php');
     } else {
         // Le mot de passe est incorrect
         header('Location: ../index.php?error=2');
